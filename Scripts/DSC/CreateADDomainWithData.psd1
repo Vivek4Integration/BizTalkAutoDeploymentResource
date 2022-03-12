@@ -10,7 +10,7 @@
 
         UserData = @'
 UserName,Password,Description
-BizTalkService,Allscripts#1,BizTalk Service User
+BizTalkUser,Integrate2022,BizTalk Service User
 '@
 GroupData = @'
 Name,Description,Member
