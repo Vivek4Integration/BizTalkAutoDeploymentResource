@@ -1,4 +1,4 @@
-@{ 
+﻿@{ 
     AllNodes = @( 
         @{ 
             Nodename = 'localhost'
@@ -9,20 +9,60 @@
     NonNodeData = @{
 
         UserData = @'
-UserName,Password,Description
-BizTalkUser,Integrate2022,BizTalk Service User
+        { 
+            "UserName": "BizTalkService",
+            "Password": "Allscripts#1",
+            "Description": "BizTalk Service User"
+         }
 '@
 GroupData = @'
-Name,Description,Member
-SSO Administrators,SSO Administrators,BizTalkService
-SSO Affiliate Administrators,SSO Affiliate Administrators,BizTalkService
-BizTalk Server Administrators,BizTalk Server Administrators,BizTalkService
-BizTalk Server Operators,BizTalk Server Operators,BizTalkService
-BizTalk Application Users,BizTalk Application Users,BizTalkService
-BizTalk Isolated Host Users,BizTalk Isolated Host Users,BizTalkService
-BAM Portal Users,BAM Portal Users,BizTalkService
-BizTalk Server B2B Operators,BizTalk Server B2B Operators,BizTalkService
-Domain Admins,Domain Admins,BizTalkService
+[
+  {
+    "Name": "SSO Administrators",
+    "Description": "SSO Administrators",
+    "Member": "BizTalkService"
+  },
+  {
+    "Name": "SSO Affiliate Administrators",       
+    "Description": "SSO Affiliate Administrators",
+    "Member": "BizTalkService"
+  },
+  {
+    "Name": "BizTalk Server Administrators",
+    "Description": "BizTalk Server Administrators",
+    "Member": "BizTalkService"
+  },
+  {
+    "Name": "BizTalk Server Operators",
+    "Description": "BizTalk Server Operators",
+    "Member": "BizTalkService"
+  },
+  {
+    "Name": "BizTalk Application Users",
+    "Description": "BizTalk Application Users",
+    "Member": "BizTalkService"
+  },
+  {
+    "Name": "BizTalk Isolated Host Users",
+    "Description": "BizTalk Isolated Host Users",
+    "Member": "BizTalkService"
+  },
+  {
+    "Name": "BAM Portal Users",
+    "Description": "BAM Portal Users",
+    "Member": "BizTalkService"
+  },
+  {
+    "Name": "BizTalk Server B2B Operators",
+    "Description": "BizTalk Server B2B Operators",
+    "Member": "BizTalkService"
+  },
+  {
+    "Name": "Domain Admins",
+    "Description": "Domain Admins",
+    "Member": "BizTalkService"
+  }
+]
 '@
 
 
