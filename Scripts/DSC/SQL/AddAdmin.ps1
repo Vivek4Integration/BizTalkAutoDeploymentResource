@@ -24,6 +24,17 @@
             InstanceName         = 'DSC'
             PsDscRunAsCredential = $SqlAdministratorCredential
         }
+        SqlRole 'Add_ServerRole_AdminSql'
+        {
+            Ensure               = 'Present'
+            ServerRoleName       = 'sysadmin'
+            Members              = 'BizTalkTest\Domain Admins'
+            ServerName           = 'TestDB'
+            InstanceName         = 'DSC'
+
+            PsDscRunAsCredential = $SqlAdministratorCredential
+            DependsOn = "[SqlLogin]Add_WindowsGroup"
+        }
 
      
     }
