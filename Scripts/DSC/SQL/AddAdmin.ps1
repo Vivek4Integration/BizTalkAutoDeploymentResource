@@ -12,6 +12,8 @@
     Import-DscResource -ModuleName 'SqlServerDsc'
 
 
+    node localhost
+    {
 
         SqlLogin 'Add_WindowsGroup'
         {
