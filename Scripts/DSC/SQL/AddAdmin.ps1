@@ -11,9 +11,7 @@
 
     Import-DscResource -ModuleName 'SqlServerDsc'
 
-    node localhost
-    {
-        
+
 
         SqlLogin 'Add_WindowsGroup'
         {
@@ -24,17 +22,7 @@
             InstanceName         = 'DSC'
             PsDscRunAsCredential = $SqlAdministratorCredential
         }
-        SqlRole 'Add_ServerRole_AdminSql'
-        {
-            Ensure               = 'Present'
-            ServerRoleName       = 'sysadmin'
-            Members              = 'BizTalkTest\Domain Admins'
-            ServerName           = 'TestDB'
-            InstanceName         = 'DSC'
-
-            PsDscRunAsCredential = $SqlAdministratorCredential
-            DependsOn = "[SqlLogin]Add_WindowsGroup"
-        }
+        
 
      
     }
